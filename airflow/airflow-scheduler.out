@@ -1,0 +1,742 @@
+[[34m2023-01-03 02:11:39,255[0m] {[34mscheduler_job.py:[0m714} INFO[0m - Starting the scheduler[0m
+[[34m2023-01-03 02:11:39,258[0m] {[34mscheduler_job.py:[0m719} INFO[0m - Processing each file at most -1 times[0m
+[[34m2023-01-03 02:11:39,267[0m] {[34mexecutor_loader.py:[0m107} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2023-01-03 02:11:39,281[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 316823[0m
+[[34m2023-01-03 02:11:39,296[0m] {[34mscheduler_job.py:[0m1399} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-01-03 02:11:39,308[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:11:39.370+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:11:40,918[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:05.862191+00:00, run_after=2023-01-02T15:17:10.862191+00:00[0m
+[[34m2023-01-03 02:11:41,070[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:16:55.862191+00:00 [scheduled]>
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:00.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:11:41,072[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:11:41,076[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 1/16 running and queued tasks[0m
+[[34m2023-01-03 02:11:41,076[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:16:55.862191+00:00 [scheduled]>
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:00.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:11:41,079[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:16:55.862191+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:11:41,082[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:16:55.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:11:41,082[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:00.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:11:41,082[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:00.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:11:41,085[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:16:55.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:11:43,769[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:11:44,679[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,679[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:11:44,745[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:11:46,208[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:11:46,209[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:11:46,249[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:11:46,249[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:11:46,380[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,384[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,385[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,385[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,386[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,386[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,387[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,387[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:11:46,485[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:16:55.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:11:55 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:11:55 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:11:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:12:29 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:12:49,112[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:00.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:12:51,784[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:12:52,621[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,628[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,628[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,629[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,629[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,629[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:12:52,701[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:12:54,191[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:12:54,194[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:12:54,236[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:12:54,236[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:12:54,388[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,391[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,392[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,392[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,393[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,393[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,396[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,396[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:12:54,491[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:00.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:13:04 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:13:04 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:13:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:13:39 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:14:01,825[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:16:55.862191+00:00 exited with status success for try_number 2[0m
+[[34m2023-01-03 02:14:01,825[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:00.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:14:01,855[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:16:55.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:11:46.724776+00:00, run_end_date=2023-01-03 01:12:47.609833+00:00, run_duration=60.885057, state=success, executor_state=success, try_number=2, max_tries=1, job_id=8128, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:11:41.076981+00:00, queued_by_job_id=8127, pid=316827[0m
+[[34m2023-01-03 02:14:01,855[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:00.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:12:54.732187+00:00, run_end_date=2023-01-03 01:14:00.478274+00:00, run_duration=65.746087, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8129, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:11:41.076981+00:00, queued_by_job_id=8127, pid=316991[0m
+[[34m2023-01-03 02:14:01,867[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=316823) last sent a heartbeat 141.05 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:14:01,876[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 316823. PIDs of all processes in the group: [316823][0m
+[[34m2023-01-03 02:14:01,882[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 316823[0m
+[[34m2023-01-03 02:14:02,245[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=316823, status='terminated', exitcode=0, started='02:11:38') (316823) terminated with exit code 0[0m
+[[34m2023-01-03 02:14:02,257[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 317284[0m
+[[34m2023-01-03 02:14:02,280[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:14:02.333+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:14:03,856[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:10.862191+00:00, run_after=2023-01-02T15:17:15.862191+00:00[0m
+[[34m2023-01-03 02:14:03,950[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:00.862191+00:00: scheduled__2023-01-02T15:17:00.862191+00:00, state:running, queued_at: 2023-01-03 01:11:40.887918+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:14:03,955[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:00.862191+00:00, run_id=scheduled__2023-01-02T15:17:00.862191+00:00, run_start_date=2023-01-03 01:11:40.951205+00:00, run_end_date=2023-01-03 01:14:03.955256+00:00, run_duration=143.004051, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:00.862191+00:00, data_interval_end=2023-01-02 15:17:05.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:14:03,974[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:05.862191+00:00, run_after=2023-01-02T15:17:10.862191+00:00[0m
+[[34m2023-01-03 02:14:03,983[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:16:55.862191+00:00: scheduled__2023-01-02T15:16:55.862191+00:00, state:running, queued_at: 2023-01-03 01:10:39.160583+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:14:03,983[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:16:55.862191+00:00, run_id=scheduled__2023-01-02T15:16:55.862191+00:00, run_start_date=2023-01-03 01:10:39.195647+00:00, run_end_date=2023-01-03 01:14:03.983878+00:00, run_duration=204.788231, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:16:55.862191+00:00, data_interval_end=2023-01-02 15:17:00.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:14:03,999[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:00.862191+00:00, run_after=2023-01-02T15:17:05.862191+00:00[0m
+[[34m2023-01-03 02:14:04,028[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:05.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:14:04,032[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:14:04,033[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:05.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:14:04,042[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:05.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:14:04,042[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:05.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:14:04,046[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:05.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:14:06,952[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:14:07,819[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,822[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,823[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,823[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,823[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,823[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:14:07,887[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:14:09,372[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:14:09,376[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:14:09,420[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:14:09,422[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:14:09,549[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,551[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,553[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,553[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,556[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,556[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,557[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,557[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:14:09,654[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:05.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:14:20 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:14:20 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:14:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:14:54 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:15:09,858[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:05.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:15:09,870[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:05.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:14:09.914897+00:00, run_end_date=2023-01-03 01:15:08.616963+00:00, run_duration=58.702066, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8130, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:14:04.034029+00:00, queued_by_job_id=8127, pid=317291[0m
+[[34m2023-01-03 02:15:09,882[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=317284) last sent a heartbeat 66.08 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:15:09,890[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 317284. PIDs of all processes in the group: [317284][0m
+[[34m2023-01-03 02:15:09,890[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 317284[0m
+[[34m2023-01-03 02:15:10,413[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=317284, status='terminated', exitcode=0, started='02:14:01') (317284) terminated with exit code 0[0m
+[[34m2023-01-03 02:15:10,426[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 317467[0m
+[[34m2023-01-03 02:15:10,472[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:15:10.542+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:15:12,154[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:15.862191+00:00, run_after=2023-01-02T15:17:20.862191+00:00[0m
+[[34m2023-01-03 02:15:12,219[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:05.862191+00:00: scheduled__2023-01-02T15:17:05.862191+00:00, state:running, queued_at: 2023-01-03 01:14:03.834382+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:15:12,219[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:05.862191+00:00, run_id=scheduled__2023-01-02T15:17:05.862191+00:00, run_start_date=2023-01-03 01:14:03.886694+00:00, run_end_date=2023-01-03 01:15:12.219566+00:00, run_duration=68.332872, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:05.862191+00:00, data_interval_end=2023-01-02 15:17:10.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:15:12,223[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:10.862191+00:00, run_after=2023-01-02T15:17:15.862191+00:00[0m
+[[34m2023-01-03 02:15:12,245[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:10.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:15:12,251[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:15:12,251[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:10.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:15:12,256[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:10.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:15:12,256[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:10.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:15:12,260[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:10.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:15:14,152[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:15:14,737[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,740[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,740[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,740[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,741[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,744[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:15:14,831[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:15:15,842[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:15:15,842[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:15:15,871[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:15:15,872[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:15:15,964[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,965[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,965[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,966[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,966[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,969[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,970[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:15,970[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:15:16,032[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:10.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:15:24 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:15:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:15:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:15:55 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:16:20,106[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:10.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:16:20,115[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:10.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:15:16.338476+00:00, run_end_date=2023-01-03 01:16:18.171881+00:00, run_duration=61.833405, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8131, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:15:12.252390+00:00, queued_by_job_id=8127, pid=317474[0m
+[[34m2023-01-03 02:16:20,130[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=317467) last sent a heartbeat 68.02 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:16:20,145[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 317467. PIDs of all processes in the group: [317467][0m
+[[34m2023-01-03 02:16:20,148[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 317467[0m
+[[34m2023-01-03 02:16:20,642[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=317467, status='terminated', exitcode=0, started='02:15:09') (317467) terminated with exit code 0[0m
+[[34m2023-01-03 02:16:20,654[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 317633[0m
+[[34m2023-01-03 02:16:20,681[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:16:20.776+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:16:22,351[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:20.862191+00:00, run_after=2023-01-02T15:17:25.862191+00:00[0m
+[[34m2023-01-03 02:16:22,414[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:10.862191+00:00: scheduled__2023-01-02T15:17:10.862191+00:00, state:running, queued_at: 2023-01-03 01:15:12.129183+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:16:22,414[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:10.862191+00:00, run_id=scheduled__2023-01-02T15:17:10.862191+00:00, run_start_date=2023-01-03 01:15:12.176137+00:00, run_end_date=2023-01-03 01:16:22.414753+00:00, run_duration=70.238616, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:10.862191+00:00, data_interval_end=2023-01-02 15:17:15.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:16:22,420[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:15.862191+00:00, run_after=2023-01-02T15:17:20.862191+00:00[0m
+[[34m2023-01-03 02:16:22,443[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:15.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:16:22,448[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:16:22,448[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:15.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:16:22,453[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:15.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:16:22,453[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:15.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:16:22,457[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:15.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:16:25,505[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:16:26,370[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,373[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,374[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,374[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,374[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,374[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:16:26,442[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:16:27,943[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:16:27,947[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:16:27,988[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:16:27,990[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:16:28,167[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,169[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,170[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,170[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,170[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,171[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,174[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,174[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:16:28,331[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:15.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:16:39 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:16:39 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:16:42 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:17:17 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:17:33,504[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:15.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:17:33,513[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:15.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:16:28.711769+00:00, run_end_date=2023-01-03 01:17:32.106198+00:00, run_duration=63.394429, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8132, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:16:22.449546+00:00, queued_by_job_id=8127, pid=317639[0m
+[[34m2023-01-03 02:17:33,552[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=317633) last sent a heartbeat 71.24 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:17:33,590[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 317633. PIDs of all processes in the group: [317633][0m
+[[34m2023-01-03 02:17:33,597[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 317633[0m
+[[34m2023-01-03 02:17:34,287[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=317633, status='terminated', exitcode=0, started='02:16:19') (317633) terminated with exit code 0[0m
+[[34m2023-01-03 02:17:34,301[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 317842[0m
+[[34m2023-01-03 02:17:34,339[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:17:34.432+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:17:34,504[0m] {[34mscheduler_job.py:[0m1399} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-01-03 02:17:34,526[0m] {[34mscheduler_job.py:[0m1422} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2023-01-03 02:17:36,564[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:25.862191+00:00, run_after=2023-01-02T15:17:30.862191+00:00[0m
+[[34m2023-01-03 02:17:36,652[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:15.862191+00:00: scheduled__2023-01-02T15:17:15.862191+00:00, state:running, queued_at: 2023-01-03 01:16:22.336071+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:17:36,656[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:15.862191+00:00, run_id=scheduled__2023-01-02T15:17:15.862191+00:00, run_start_date=2023-01-03 01:16:22.376976+00:00, run_end_date=2023-01-03 01:17:36.656373+00:00, run_duration=74.279397, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:15.862191+00:00, data_interval_end=2023-01-02 15:17:20.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:17:36,662[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:20.862191+00:00, run_after=2023-01-02T15:17:25.862191+00:00[0m
+[[34m2023-01-03 02:17:36,701[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:20.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:17:36,709[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:17:36,709[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:20.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:17:36,721[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:20.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:17:36,723[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:20.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:17:36,727[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:20.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:17:39,440[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:17:40,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,163[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,163[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:17:40,205[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:17:41,055[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:17:41,057[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:17:41,081[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:17:41,082[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:17:41,212[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,215[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,216[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,216[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,217[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,217[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,218[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,220[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:17:41,318[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:20.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:17:53 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:17:53 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:17:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[[34m2023-01-03 02:18:20,171[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:20.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:18:20,185[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:20.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:17:41.480763+00:00, run_end_date=2023-01-03 01:18:17.808647+00:00, run_duration=36.327884, state=failed, executor_state=success, try_number=1, max_tries=1, job_id=8133, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:18:13.123073+00:00, queued_by_job_id=8134, pid=317895[0m
+[[34m2023-01-03 02:18:20,693[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:35.862191+00:00, run_after=2023-01-02T15:17:40.862191+00:00[0m
+[[34m2023-01-03 02:18:20,778[0m] {[34mdagrun.py:[0m585} ERROR[0m - Marking run <DagRun anas @ 2023-01-02 15:17:20.862191+00:00: scheduled__2023-01-02T15:17:20.862191+00:00, state:running, queued_at: 2023-01-03 01:17:36.551860+00:00. externally triggered: False> failed[0m
+[[34m2023-01-03 02:18:20,782[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:20.862191+00:00, run_id=scheduled__2023-01-02T15:17:20.862191+00:00, run_start_date=2023-01-03 01:17:36.602043+00:00, run_end_date=2023-01-03 01:18:20.782145+00:00, run_duration=44.180102, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:20.862191+00:00, data_interval_end=2023-01-02 15:17:25.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:18:20,789[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:25.862191+00:00, run_after=2023-01-02T15:17:30.862191+00:00[0m
+[[34m2023-01-03 02:18:20,833[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:30.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:18:20,843[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 1/16 running and queued tasks[0m
+[[34m2023-01-03 02:18:20,843[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:30.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:18:20,847[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:30.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:18:20,847[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:30.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:18:20,855[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:30.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:18:26,159[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:18:27,663[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,664[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,665[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,665[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,665[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,666[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:18:27,760[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:18:29,890[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:18:29,893[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:18:29,942[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:18:29,945[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:18:30,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,132[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,132[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,132[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,134[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,135[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,135[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:18:30,294[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:30.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:18:45 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:18:45 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:18:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:19:37 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:20:01,912[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:30.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:20:01,917[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:30.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:18:30.659200+00:00, run_end_date=2023-01-03 01:20:00.040396+00:00, run_duration=89.381196, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8136, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:18:20.844570+00:00, queued_by_job_id=8127, pid=318300[0m
+[[34m2023-01-03 02:20:01,934[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=317842) last sent a heartbeat 101.29 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:20:01,945[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 317842. PIDs of all processes in the group: [317842][0m
+[[34m2023-01-03 02:20:01,949[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 317842[0m
+[[34m2023-01-03 02:20:02,558[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=317842, status='terminated', exitcode=0, started='02:17:33') (317842) terminated with exit code 0[0m
+[[34m2023-01-03 02:20:02,568[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 319405[0m
+[[34m2023-01-03 02:20:02,606[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:20:02.765+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:20:05,245[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:40.862191+00:00, run_after=2023-01-02T15:17:45.862191+00:00[0m
+[[34m2023-01-03 02:20:05,328[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:30.862191+00:00: scheduled__2023-01-02T15:17:30.862191+00:00, state:running, queued_at: 2023-01-03 01:18:20.684766+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:20:05,333[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:30.862191+00:00, run_id=scheduled__2023-01-02T15:17:30.862191+00:00, run_start_date=2023-01-03 01:18:20.723418+00:00, run_end_date=2023-01-03 01:20:05.333611+00:00, run_duration=104.610193, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:30.862191+00:00, data_interval_end=2023-01-02 15:17:35.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:20:05,340[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:35.862191+00:00, run_after=2023-01-02T15:17:40.862191+00:00[0m
+[[34m2023-01-03 02:20:05,348[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:25.862191+00:00: scheduled__2023-01-02T15:17:25.862191+00:00, state:running, queued_at: 2023-01-03 01:18:12.755343+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:20:05,357[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:25.862191+00:00, run_id=scheduled__2023-01-02T15:17:25.862191+00:00, run_start_date=2023-01-03 01:18:12.881278+00:00, run_end_date=2023-01-03 01:20:05.357177+00:00, run_duration=112.475899, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:25.862191+00:00, data_interval_end=2023-01-02 15:17:30.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:20:05,365[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:30.862191+00:00, run_after=2023-01-02T15:17:35.862191+00:00[0m
+[[34m2023-01-03 02:20:05,402[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:35.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:20:05,402[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:20:05,403[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:35.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:20:05,412[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:35.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:20:05,412[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:35.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:20:05,416[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:35.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:20:08,584[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:20:10,086[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,090[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,090[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,090[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,094[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,094[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:20:10,270[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:20:12,501[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:20:12,504[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:20:12,550[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:20:12,550[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:20:12,684[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,689[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,690[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,691[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,691[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,691[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,692[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,693[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:20:12,806[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:35.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:20:24 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:20:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:20:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:21:13 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:21:38,789[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:35.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:21:38,798[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:35.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:20:13.092438+00:00, run_end_date=2023-01-03 01:21:36.660670+00:00, run_duration=83.568232, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8138, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:20:05.404588+00:00, queued_by_job_id=8127, pid=319531[0m
+[[34m2023-01-03 02:21:38,810[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=319405) last sent a heartbeat 93.61 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:21:38,823[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 319405. PIDs of all processes in the group: [319405][0m
+[[34m2023-01-03 02:21:38,826[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 319405[0m
+[[34m2023-01-03 02:21:39,334[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=319405, status='terminated', exitcode=0, started='02:20:01') (319405) terminated with exit code 0[0m
+[[34m2023-01-03 02:21:39,347[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 320766[0m
+[[34m2023-01-03 02:21:39,386[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:21:39.440+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:21:41,797[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:50.862191+00:00, run_after=2023-01-02T15:17:55.862191+00:00[0m
+[[34m2023-01-03 02:21:41,880[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:40.862191+00:00: scheduled__2023-01-02T15:17:40.862191+00:00, state:running, queued_at: 2023-01-03 01:20:05.691418+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:21:41,888[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:40.862191+00:00, run_id=scheduled__2023-01-02T15:17:40.862191+00:00, run_start_date=2023-01-03 01:20:05.731450+00:00, run_end_date=2023-01-03 01:21:41.888207+00:00, run_duration=96.156757, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:40.862191+00:00, data_interval_end=2023-01-02 15:17:45.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:21:41,894[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:45.862191+00:00, run_after=2023-01-02T15:17:50.862191+00:00[0m
+[[34m2023-01-03 02:21:41,904[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:35.862191+00:00: scheduled__2023-01-02T15:17:35.862191+00:00, state:running, queued_at: 2023-01-03 01:20:05.238743+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:21:41,909[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:35.862191+00:00, run_id=scheduled__2023-01-02T15:17:35.862191+00:00, run_start_date=2023-01-03 01:20:05.279956+00:00, run_end_date=2023-01-03 01:21:41.909649+00:00, run_duration=96.629693, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:35.862191+00:00, data_interval_end=2023-01-02 15:17:40.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:21:41,913[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:40.862191+00:00, run_after=2023-01-02T15:17:45.862191+00:00[0m
+[[34m2023-01-03 02:21:41,949[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:45.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:21:41,949[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:21:41,949[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:45.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:21:41,954[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:45.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:21:41,955[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:45.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:21:41,962[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:45.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:21:45,696[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:21:47,125[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,130[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,131[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:21:47,226[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:21:49,310[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:21:49,311[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:21:49,350[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:21:49,354[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:21:49,483[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,485[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,486[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,490[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,491[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,491[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,492[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,492[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:21:49,606[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:45.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:22:02 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:22:02 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:22:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:22:36 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:22:49,169[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:45.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:22:49,178[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:45.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:21:49.855950+00:00, run_end_date=2023-01-03 01:22:48.545628+00:00, run_duration=58.689678, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8140, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:21:41.950548+00:00, queued_by_job_id=8127, pid=320871[0m
+[[34m2023-01-03 02:22:49,193[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=320766) last sent a heartbeat 67.45 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:22:49,204[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 320766. PIDs of all processes in the group: [320766][0m
+[[34m2023-01-03 02:22:49,206[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 320766[0m
+[[34m2023-01-03 02:22:49,474[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=320766, status='terminated', exitcode=0, started='02:21:38') (320766) terminated with exit code 0[0m
+[[34m2023-01-03 02:22:49,488[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 321752[0m
+[[34m2023-01-03 02:22:49,510[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:22:49.538+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:22:49,567[0m] {[34mscheduler_job.py:[0m1399} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-01-03 02:22:49,576[0m] {[34mscheduler_job.py:[0m1422} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2023-01-03 02:22:50,267[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:00.862191+00:00, run_after=2023-01-02T15:18:05.862191+00:00[0m
+[[34m2023-01-03 02:22:50,334[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:45.862191+00:00: scheduled__2023-01-02T15:17:45.862191+00:00, state:running, queued_at: 2023-01-03 01:21:41.783424+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:22:50,335[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:45.862191+00:00, run_id=scheduled__2023-01-02T15:17:45.862191+00:00, run_start_date=2023-01-03 01:21:41.824122+00:00, run_end_date=2023-01-03 01:22:50.335586+00:00, run_duration=68.511464, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:45.862191+00:00, data_interval_end=2023-01-02 15:17:50.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:22:50,338[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:50.862191+00:00, run_after=2023-01-02T15:17:55.862191+00:00[0m
+[[34m2023-01-03 02:22:50,354[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:50.862191+00:00 [scheduled]>
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:55.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:22:50,355[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:22:50,355[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 1/16 running and queued tasks[0m
+[[34m2023-01-03 02:22:50,355[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:50.862191+00:00 [scheduled]>
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:55.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:22:50,358[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:50.862191+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:22:50,358[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:50.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:22:50,359[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:17:55.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:22:50,359[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:55.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:22:50,363[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:50.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:22:52,081[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:22:52,750[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,751[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,751[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,752[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,752[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,752[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:22:52,795[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:22:53,743[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:22:53,743[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:22:53,763[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:22:53,764[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:22:53,825[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,826[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,826[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,827[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,827[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,827[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,828[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,828[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:22:53,874[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:50.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:22:59 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:22:59 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:23:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:23:21 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:23:31,928[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:17:55.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:23:33,219[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:23:33,619[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,619[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,620[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,620[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,620[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,620[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:23:33,652[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:23:34,906[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:23:34,907[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:23:34,930[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:23:34,930[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:23:35,010[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,010[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,011[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,011[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,012[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,012[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,012[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,013[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:23:35,072[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:17:55.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:23:41 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:23:41 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:23:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:24:03 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:24:13,114[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:50.862191+00:00 exited with status success for try_number 2[0m
+[[34m2023-01-03 02:24:13,114[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:17:55.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:24:13,122[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:50.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:22:54.003474+00:00, run_end_date=2023-01-03 01:23:31.148141+00:00, run_duration=37.144667, state=success, executor_state=success, try_number=2, max_tries=1, job_id=8142, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:22:50.356349+00:00, queued_by_job_id=8127, pid=321809[0m
+[[34m2023-01-03 02:24:13,126[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:17:55.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:23:35.225146+00:00, run_end_date=2023-01-03 01:24:12.498559+00:00, run_duration=37.273413, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8143, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:22:50.356349+00:00, queued_by_job_id=8127, pid=322296[0m
+[[34m2023-01-03 02:24:13,138[0m] {[34mmanager.py:[0m301} ERROR[0m - DagFileProcessorManager (PID=321752) last sent a heartbeat 82.89 seconds ago! Restarting it[0m
+[[34m2023-01-03 02:24:13,154[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 321752. PIDs of all processes in the group: [321752][0m
+[[34m2023-01-03 02:24:13,155[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 321752[0m
+[[34m2023-01-03 02:24:13,338[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=321752, status='terminated', exitcode=0, started='02:22:48') (321752) terminated with exit code 0[0m
+[[34m2023-01-03 02:24:13,345[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 322605[0m
+[[34m2023-01-03 02:24:13,361[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-01-03T02:24:13.399+0100] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-01-03 02:24:14,191[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:05.862191+00:00, run_after=2023-01-02T15:18:10.862191+00:00[0m
+[[34m2023-01-03 02:24:14,226[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:55.862191+00:00: scheduled__2023-01-02T15:17:55.862191+00:00, state:running, queued_at: 2023-01-03 01:22:50.256884+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:24:14,227[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:55.862191+00:00, run_id=scheduled__2023-01-02T15:17:55.862191+00:00, run_start_date=2023-01-03 01:22:50.285106+00:00, run_end_date=2023-01-03 01:24:14.227134+00:00, run_duration=83.942028, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:55.862191+00:00, data_interval_end=2023-01-02 15:18:00.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:24:14,231[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:00.862191+00:00, run_after=2023-01-02T15:18:05.862191+00:00[0m
+[[34m2023-01-03 02:24:14,234[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:17:50.862191+00:00: scheduled__2023-01-02T15:17:50.862191+00:00, state:running, queued_at: 2023-01-03 01:21:42.556182+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:24:14,235[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:17:50.862191+00:00, run_id=scheduled__2023-01-02T15:17:50.862191+00:00, run_start_date=2023-01-03 01:21:42.604311+00:00, run_end_date=2023-01-03 01:24:14.235238+00:00, run_duration=151.630927, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:17:50.862191+00:00, data_interval_end=2023-01-02 15:17:55.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:24:14,238[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:17:55.862191+00:00, run_after=2023-01-02T15:18:00.862191+00:00[0m
+[[34m2023-01-03 02:24:14,253[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:00.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:24:14,253[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:24:14,254[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:00.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:24:14,257[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:18:00.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:24:14,257[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:00.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:24:14,261[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:00.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:24:15,486[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:24:15,869[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,870[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,870[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,870[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,871[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,871[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:15,901[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:24:16,575[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:24:16,575[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:24:16,595[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:24:16,595[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:24:16,658[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,658[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,659[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,659[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,660[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,660[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:16,707[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:00.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:24:21 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:24:21 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:24:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:24:40 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:24:51,743[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:18:00.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:24:51,748[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:18:00.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:24:16.827019+00:00, run_end_date=2023-01-03 01:24:51.166179+00:00, run_duration=34.33916, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8144, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:24:14.254840+00:00, queued_by_job_id=8127, pid=322608[0m
+[[34m2023-01-03 02:24:52,151[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:00.862191+00:00, run_after=2023-01-02T15:18:05.862191+00:00[0m
+[[34m2023-01-03 02:24:52,171[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:18:00.862191+00:00: scheduled__2023-01-02T15:18:00.862191+00:00, state:running, queued_at: 2023-01-03 01:24:14.183358+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:24:52,171[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:18:00.862191+00:00, run_id=scheduled__2023-01-02T15:18:00.862191+00:00, run_start_date=2023-01-03 01:24:14.206451+00:00, run_end_date=2023-01-03 01:24:52.171603+00:00, run_duration=37.965152, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:18:00.862191+00:00, data_interval_end=2023-01-02 15:18:05.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:24:52,175[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:05.862191+00:00, run_after=2023-01-02T15:18:10.862191+00:00[0m
+[[34m2023-01-03 02:24:53,352[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:10.862191+00:00, run_after=2023-01-02T15:18:15.862191+00:00[0m
+[[34m2023-01-03 02:24:53,396[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:05.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:24:53,397[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:24:53,397[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:05.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:24:53,400[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:18:05.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:24:53,400[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:05.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:24:53,404[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:05.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:24:54,575[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:24:54,947[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,947[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,947[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,947[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,948[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,948[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:24:54,978[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:24:55,631[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:24:55,631[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:24:55,650[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:24:55,651[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:24:55,711[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,712[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,712[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,712[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,713[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,713[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,714[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,714[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:24:55,759[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:05.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:25:00 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:25:00 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:25:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:25:16 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:25:26,089[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:18:05.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:25:26,094[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:18:05.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:24:55.877542+00:00, run_end_date=2023-01-03 01:25:25.383252+00:00, run_duration=29.50571, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8145, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:24:53.398154+00:00, queued_by_job_id=8127, pid=322798[0m
+[[34m2023-01-03 02:25:26,291[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:15.862191+00:00, run_after=2023-01-02T15:18:20.862191+00:00[0m
+[[34m2023-01-03 02:25:26,326[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:18:05.862191+00:00: scheduled__2023-01-02T15:18:05.862191+00:00, state:running, queued_at: 2023-01-03 01:24:53.346170+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:25:26,327[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:18:05.862191+00:00, run_id=scheduled__2023-01-02T15:18:05.862191+00:00, run_start_date=2023-01-03 01:24:53.367725+00:00, run_end_date=2023-01-03 01:25:26.327048+00:00, run_duration=32.959323, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:18:05.862191+00:00, data_interval_end=2023-01-02 15:18:10.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:25:26,330[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:10.862191+00:00, run_after=2023-01-02T15:18:15.862191+00:00[0m
+[[34m2023-01-03 02:25:26,344[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:10.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:25:26,345[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:25:26,345[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:10.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:25:26,348[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:18:10.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:25:26,348[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:10.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:25:26,352[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:10.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:25:27,621[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:25:28,240[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,240[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,240[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,240[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,241[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,241[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:25:28,270[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:25:29,135[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:25:29,135[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:25:29,160[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:25:29,160[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:25:29,245[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,245[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,246[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,246[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,247[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,247[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,247[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,248[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:25:29,294[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:10.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:25:35 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:25:35 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:25:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:25:55 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:26:06,352[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of anas.executer_mon_code_python_chaque_second run_id=scheduled__2023-01-02T15:18:10.862191+00:00 exited with status success for try_number 1[0m
+[[34m2023-01-03 02:26:06,357[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=anas, task_id=executer_mon_code_python_chaque_second, run_id=scheduled__2023-01-02T15:18:10.862191+00:00, map_index=-1, run_start_date=2023-01-03 01:25:29.427597+00:00, run_end_date=2023-01-03 01:26:05.580668+00:00, run_duration=36.153071, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8146, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-03 01:25:26.346221+00:00, queued_by_job_id=8127, pid=322950[0m
+[[34m2023-01-03 02:26:06,823[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:15.862191+00:00, run_after=2023-01-02T15:18:20.862191+00:00[0m
+[[34m2023-01-03 02:26:06,842[0m] {[34mdagrun.py:[0m606} INFO[0m - Marking run <DagRun anas @ 2023-01-02 15:18:10.862191+00:00: scheduled__2023-01-02T15:18:10.862191+00:00, state:running, queued_at: 2023-01-03 01:25:26.285409+00:00. externally triggered: False> successful[0m
+[[34m2023-01-03 02:26:06,842[0m] {[34mdagrun.py:[0m657} INFO[0m - DagRun Finished: dag_id=anas, execution_date=2023-01-02 15:18:10.862191+00:00, run_id=scheduled__2023-01-02T15:18:10.862191+00:00, run_start_date=2023-01-03 01:25:26.306494+00:00, run_end_date=2023-01-03 01:26:06.842822+00:00, run_duration=40.536328, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-02 15:18:10.862191+00:00, data_interval_end=2023-01-02 15:18:15.862191+00:00, dag_hash=6797743439b36967d1fc7594ba769ecd[0m
+[[34m2023-01-03 02:26:06,846[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:15.862191+00:00, run_after=2023-01-02T15:18:20.862191+00:00[0m
+[[34m2023-01-03 02:26:08,219[0m] {[34mdag.py:[0m3423} INFO[0m - Setting next_dagrun for anas to 2023-01-02T15:18:20.862191+00:00, run_after=2023-01-02T15:18:25.862191+00:00[0m
+[[34m2023-01-03 02:26:08,260[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:15.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:26:08,261[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG anas has 0/16 running and queued tasks[0m
+[[34m2023-01-03 02:26:08,261[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:15.862191+00:00 [scheduled]>[0m
+[[34m2023-01-03 02:26:08,264[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='anas', task_id='executer_mon_code_python_chaque_second', run_id='scheduled__2023-01-02T15:18:15.862191+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-01-03 02:26:08,264[0m] {[34mbase_executor.py:[0m95} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:15.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:26:08,268[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:15.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:26:09,679[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:26:10,396[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,400[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,401[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,401[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,401[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,401[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:10,511[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:26:11,201[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:26:11,201[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:26:11,220[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:26:11,220[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:26:11,280[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,280[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,281[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,281[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,282[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,282[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,283[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,283[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:11,327[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:15.862191+00:00 [queued]> on host anasdaghai-VirtualBox[0m
+23/01/03 02:26:15 WARN Utils: Your hostname, anasdaghai-VirtualBox resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+23/01/03 02:26:16 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/01/03 02:26:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/03 02:26:32 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[[34m2023-01-03 02:26:34,052[0m] {[34mscheduler_job.py:[0m179} INFO[0m - Exiting gracefully upon receiving signal 15[0m
+[[34m2023-01-03 02:26:35,096[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 322605. PIDs of all processes in the group: [322605][0m
+[[34m2023-01-03 02:26:35,097[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 322605[0m
+[[34m2023-01-03 02:26:35,799[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=322605, status='terminated', exitcode=0, started='02:24:12') (322605) terminated with exit code 0[0m
+[[34m2023-01-03 02:26:35,816[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'anas', 'executer_mon_code_python_chaque_second', 'scheduled__2023-01-02T15:18:15.862191+00:00', '--local', '--subdir', 'DAGS_FOLDER/code_automation_airflow.py'][0m
+[[34m2023-01-03 02:26:41,141[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/anasdaghai/airflow/dags/code_automation_airflow.py[0m
+[[34m2023-01-03 02:26:42,777[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,781[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,781[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,786[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,786[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,787[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-01-03 02:26:42,916[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:26:45,077[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:26:45,078[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-01-03 02:26:45,096[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/anasdaghai/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-01-03 02:26:45,097[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-01-03 02:26:45,190[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,190[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,191[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,191[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,192[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,195[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,196[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,196[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-01-03 02:26:45,244[0m] {[34mtask_command.py:[0m389} INFO[0m - Running <TaskInstance: anas.executer_mon_code_python_chaque_second scheduled__2023-01-02T15:18:15.862191+00:00 [success]> on host anasdaghai-VirtualBox[0m
+[[34m2023-01-03 02:26:45,880[0m] {[34mprocess_utils.py:[0m129} INFO[0m - Sending Signals.SIGTERM to group 322605. PIDs of all processes in the group: [][0m
+[[34m2023-01-03 02:26:45,880[0m] {[34mprocess_utils.py:[0m84} INFO[0m - Sending the signal Signals.SIGTERM to group 322605[0m
+[[34m2023-01-03 02:26:45,881[0m] {[34mprocess_utils.py:[0m98} INFO[0m - Sending the signal Signals.SIGTERM to process 322605 as process group is missing.[0m
+[[34m2023-01-03 02:26:45,882[0m] {[34mscheduler_job.py:[0m788} INFO[0m - Exited execute loop[0m
