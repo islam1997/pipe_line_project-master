@@ -28,7 +28,7 @@ Nous avons utilisé la bibliothéque `flask_restful` consommant l'API `tweepy` a
 
 Ci dessous une illustration de notre scraping.
 
-![image1](https://github.com/islam1997/Data_pipeline_project/blob/main/Capture/scaping.png)
+![image1](https://github.com/islam1997/pipe_line_project-master/blob/master/Capture/scaping.png)
 
 Etape 3:
 Cette API joue le rôle d'intermédiaire entre twitter et `Nifi` , notre gestionnaire de flux de données.
@@ -36,10 +36,16 @@ Cette API joue le rôle d'intermédiaire entre twitter et `Nifi` , notre gestion
 Le script de l'API est disponible sous le répertoire *"/data"*.
 
 Le premier process group `condidats_groupe` consomme l'API twitter créé précédemment pour chaque candidat des élections.
+![condidat_groupe](https://github.com/islam1997/pipe_line_project-master/blob/master/Capture/nifi_condidat_groupe.png)
 
 Le deuxième process group `election`concerne un dataset portant sur les élections présidentielles de 2022.
+![election_groupe](https://github.com/islam1997/pipe_line_project-master/blob/master/Capture/nifi_election_groupe.png)
 
 Ci dessous quelques illustrations des schémas réalisé avec `Nifi`.
+![election](https://github.com/islam1997/pipe_line_project-master/blob/master/Capture/nifi_election.png)
+
+![condida](https://github.com/islam1997/pipe_line_project-master/blob/master/Capture/nifi_condidat.png)
+
 
 Pour chaque électeur, une requête `GET` sera envoyée vers l'API de twitter.
 
