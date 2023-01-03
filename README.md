@@ -58,7 +58,7 @@ Les données seront regroupés dans un ficher `CSV` qui sera envoyé vers un top
 
 Une fois les données collectées, nous avons procédés à la création d'un dataset regroupant les outputs de nos différents batchs pour créer un fichier final pour chaque candidat.
 
-Nous avons effectués plusieurs opérations moyennant principalement `Pyspark` sur les données collectés via twitter et ceux des élections présidentielles de 2017 tel que:
+Nous avons effectués plusieurs opérations moyennant principalement `Pyspark` sur les données collectés via twitter et ceux des élections présidentielles de 2022 tel que:
 
 - Suppression des doublons.
 - Traitement des symboles.
